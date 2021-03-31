@@ -19,15 +19,15 @@
 				<div class="col-lg-5">
 				</div>
 		        <div class="col-lg-6">
-		            <form:form modelAttribute="userDto" action="/signup" method="post">
+		            <form:form modelAttribute="userRegDto" action="/signup" method="post">
 		                <div class="form-group input-group">
 		                    <form:input type="text" placeholder="ID" path="id"/>
 		                    <form:errors path="id"/>
 		                </div>
 		                <div class="form-group input-group">
 		                    <form:input id="email" type="text" placeholder="Email" path="email"/>
-		                    <form:errors path="email"/>
 		                    <input type="button" id="email-btn" class="btn btn-white" onClick="fn_sendEmail()" value="이메일 인증">
+		                    <form:errors path="email"/>
 		                </div>
 		                <div class="form-group input-group">
 		                    <input type="text" disabled="disabled" id="inputCode" placeholder="인증번호를 입력해주세요">
@@ -45,7 +45,7 @@
 		                    <form:password placeholder="Password Check" path="passwordCheck"/>
 		                    <form:errors path="passwordCheck"/>
 		                </div>
-		                <input type="button" id="submit-btn" class="btn btn-white" disabled="disabled" value="가입하기">
+		                <input type="submit" id="submit-btn" class="btn btn-white" value="가입하기">
 		                <button type="reset" class="btn btn-white">취소하기</button>
 		            </form:form>
 		        </div>

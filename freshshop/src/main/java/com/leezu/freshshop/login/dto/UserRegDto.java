@@ -1,6 +1,6 @@
 package com.leezu.freshshop.login.dto;
 
-public class UserDto {
+public class UserRegDto {
 	private String id;
 	private String email;
 	private String name;
@@ -38,5 +38,7 @@ public class UserDto {
 		this.passwordCheck = passwordCheck;
 	}
 	
-	
+	public boolean passwordEqual() {
+		return passwordCheck.equals(password);
+	}
 }
